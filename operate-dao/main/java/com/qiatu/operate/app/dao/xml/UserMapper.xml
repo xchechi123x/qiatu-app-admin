@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiatu.operate.app.dao.mapper.UserMapper">
+
+    <select id="selectLoginUser" resultType="int" parameterType="map">
+        select count(*) from le_operate_user WHERE user_name = #{userName} and passwd = #{password};
+    </select>
+
+    <insert id="addOperateUser">
+        insert into le_operate_user
+        (user_name, passwd)
+        VALUES
+        (#{useName},#{password})
+    </insert>
+</mapper>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiatu.operate.app.dao.mapper.ArticleMapper">
+
+    <resultMap id="ARTICLE_MODEL_MAP" type="ArticleModel">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="sub_title" property="subTitle"/>
+        <result column="text_body" property="textBody"/>
+        <result column="praise_count" property="praiseCount"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <select id="getArticleList" resultMap="ARTICLE_MODEL_MAP">
+        select id,title,sub_title,text_body,praise_count,update_time,create_time
+        from le_articles
+        order by update_time desc
+        limit #{recordOffset},#{pageSize}
+    </select>
+
+    <select id="getArticleListSize" resultType="int">
+        select count(*) from le_articles a;
+    </select>
+
+    <select id="selectArticleById" resultType="java.util.Map">
+        select id as id, title as title,sub_title as subTitle,text_body as textBody from le_articles WHERE id = #{id}
+    </select>
+
+    <insert id="insertArticle" parameterType="java.util.Map">
+        insert into le_articles
+        <trim prefix="(" suffix=")">
+            <if test="title != ''">
+                title,
+            </if>
+            <if test="subTitle != ''">
+                sub_title,
+            </if>
+            <if test="textBody != ''">
+                text_body,
+            </if>
+            create_time,
+            update_time
+        </trim>
+
+        <trim prefix="values (" suffix=")">
+            <if test="title != ''">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="subTitle != ''">
+                #{subTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="textBody != ''">
+                #{textBody,jdbcType=VARCHAR},
+            </if>
+            now(),
+            now()
+        </trim>
+
+    </insert>
+
+    <update id="updateArticleById" parameterType="java.util.Map">
+        update le_articles
+        <set>
+            <if test="title != ''">
+                title=#{title,jdbcType=VARCHAR},
+            </if>
+            <if test="subTitle != ''">
+                sub_title=#{subTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="textBody != ''">
+                text_body=#{textBody,jdbcType=VARCHAR},
+            </if>
+            update_time = now()
+        </set>
+        WHERE id =#{id,jdbcType=BIGINT}
+    </update>
+
+    <delete id="deleteArticleByIds">
+        DELETE FROM le_articles WHERE id in
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+            ${id}
+        </foreach>
+    </delete>
+
+</mapper>

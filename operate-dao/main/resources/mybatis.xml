@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="localCacheScope" value="SESSION"/>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="com.qiatu.operate.app.model.ArticleModel" alias="ArticleModel"/>
+        <typeAlias type="com.qiatu.operate.app.model.RecommendHotel" alias="RecommendHotel"/>
+        <typeAlias type="com.qiatu.operate.app.model.ImageModel" alias="ImageModel"/>
+        <typeAlias type="com.qiatu.operate.app.model.RecommendReason" alias="RecommendReason"/>
+    </typeAliases>
+</configuration>

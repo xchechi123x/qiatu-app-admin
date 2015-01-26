@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>package</id>
+    <formats>
+        <format>tgz</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+            <directory>target/qiatu-operate-app</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>**/**</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

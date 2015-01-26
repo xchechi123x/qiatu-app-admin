@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="app-admin-local-test" uuid="d220433c-4399-4f7a-9093-671602e7a67e">
+    <database-info product="MySQL" version="5.5.40-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="le_release"/>
+    <table name="le_admin_user" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_administrative" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5ZCN56ew"/>
+      <column name="pid" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54i2SUQ="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_app_advert" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="advertiser_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5bm/5ZGK5Lia5Li7SUQ="/>
+      <column name="adv_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5bm/5ZGK5ZCN56ew"/>
+      <column name="description" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5bm/5ZGK5o+P6L+w"/>
+      <column name="img_url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5bm/5ZGK5Zu+54mH5Zyw5Z2A"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_articles" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="5qCH6aKY"/>
+      <column name="sub_title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" remarks="5paH56ug5a2Q5qCH6aKY"/>
+      <column name="text_body" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="5paH56ug5YaF5a65"/>
+      <column name="img_ids" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="rid" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="praise_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="detialUrl" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_common_code" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="comm_code" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" remarks="5Lia5Yqh5qCH6K+G56CB"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" remarks="5Lia5Yqh5qCH6K+G5ZCN56ew"/>
+      <column name="type" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" remarks="5Luj56CB57G75Z6L"/>
+      <column name="description" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" remarks="5Lia5Yqh5Luj56CB5o+P6L+w"/>
+      <column name="createTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="updateTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_condition_room_type" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="RID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="6YWS5bqX5oi/5Z6LSUQ="/>
+      <column name="TITLE" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5p2h5Lu25oi/5Z6L5qCH6aKY"/>
+      <column name="DETIAL_URL" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="5p+l55yL6LSt5LmwVVJM5Zyw5Z2A"/>
+      <column name="CARD_ICON" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5Y2h54mH5oiW6ICF5piv5Zu+5qCH"/>
+      <column name="CONDITION_PRICE" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3" def="MC4wMA==" remarks="5pyJ5p2h5Lu255qE5LyY5oOg5Lu35qC8"/>
+      <column name="CONDTION_TYPE_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5p2h5Lu25YiG57G757G75Z6L"/>
+      <column name="ROOM_DESCRIPTION" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5pyJ5p2h5Lu25Lu35qC85oi/5Z6L5o+P6L+w"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_discovery" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="rid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="6LWE5rqQ5YWz6IGUSUQ="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="5Y+R546w5o6o6I2Q5qCH6aKY"/>
+      <column name="sub_title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="5Y+R546w5o6o6I2Q5a2Q5qCH6aKY"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_hotel" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="hotel_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JyAn" remarks="6YWS5bqX5ZCN56ew"/>
+      <column name="city_code" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JyAn" remarks="5Z+O5biC5Luj56CB"/>
+      <column name="location_x" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" remarks="6YWS5bqX5Z2Q5qCH"/>
+      <column name="location_y" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="dist" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="6Led56a7IA=="/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="6YWS5bqX5o+P6L+w"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="hotel_name_en" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="star_level" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="address" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="official_site" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_hotel_ref_tag" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="TAG_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5qCH562+SUQ="/>
+      <column name="HOTEL_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="6YWS5bqXSUQ="/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_hotel_room" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" remarks="5oi/6Ze057G75Z6L5ZCN56ew"/>
+      <column name="HOTEL_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5YWz6IGU6YWS5bqXSUQ="/>
+      <column name="ROOM_TYPE" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5oi/6Ze057G75Z6L"/>
+      <column name="ROOM_COUNT" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="5oi/5Z6L5oi/6Ze05oC75pWw"/>
+      <column name="PEOPLE_COUNT" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" remarks="5YWl5L2P5Lq65pWw"/>
+      <column name="DAY_COUNT" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="5YWl5L2P5aSp5pWw"/>
+      <column name="IMAGE_URL_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5Zu+54mH5Y2h55qE6Lev5b6ESUQ="/>
+      <column name="PRICE" sqlType="DECIMAL UNSIGNED" precision="10" scale="2" nullable="false" jdbcType="3" def="MC4wMA==" remarks="5oi/5Z6L5Lu35qC8"/>
+      <column name="ROOM_DESCRIPTION" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5oi/5Z6L5o+P6L+w"/>
+      <column name="BEGIN_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn" remarks="5YWl5L2P5pe26Ze0"/>
+      <column name="END_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn" remarks="56a75byA5pe26Ze0"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_hotel_spiderId_ref" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="hotel_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" remarks="6YWS5bqXSUTlj7fvvIzlr7nlupToh7NsZV9ob3RlbOihqA=="/>
+      <column name="propertyId" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" remarks="5oqT5Y+W6YWS5bqX55qE54us56uL55qEaWTlj7c="/>
+      <column name="hgroup" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" remarks="6YWS5bqX6ZuG5Zui"/>
+      <column name="resource" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" remarks="5p2l5rqQ77yM5oqT5Y+W5p2l5rqQ44CC"/>
+      <column name="hotel_name_en" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" remarks="6YWS5bqX6Iux5paH5ZCN"/>
+      <column name="hotel_name_cn" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" remarks="6YWS5bqX5Lit5paH5ZCN"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="resource_link" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_hotel_tag" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="uid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi3SUQ="/>
+      <column name="tag_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6YWS5bqX5qCH562+"/>
+      <column name="is_recommend" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm5o6o6I2Q6auY5Lqu5pi+56S6LDA65LiN5o6o6I2QLDE65o6o6I2Q"/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5qCH562+57G75Z6L5YiG57G7MDrns7vnu5/mjqjojZDmoIfnrb4sMTrnlKjmiLfmoIfnrb4="/>
+      <column name="tag_icon" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="5qCH562+5Zu+5qCH"/>
+      <column name="icon_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5qCH562+5Zu+5qCH"/>
+      <column name="category_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5qCH562+5YiG57uESUQ="/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5qCH562+5o+P6L+w"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_hotel_tag_group" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="group_name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5qCH562+5YiG57uE5ZCN56ew"/>
+      <column name="group_icon" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Zu+5qCH5Zyw5Z2A"/>
+      <column name="name_code" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YiG57uE5ZCN56ew6Iux5paH5qCH5rOo"/>
+      <column name="is_recommend" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm5o6o6I2QLDA65LiN5o6o6I2QLDE65o6o6I2Q"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_imgs" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="rid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5YWz6IGU6LWE5rqQSUQ="/>
+      <column name="is_cover" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="5piv5ZCm5piv5bCB6Z2i5Li75Zu+"/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="5YWz6IGU6LWE5rqQ57G75Z6LMSzmlofnq6AsMumFkuW6lw=="/>
+      <column name="img_url" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Zu+54mH5Zyw5Z2A"/>
+      <column name="img_desc" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Zu+54mH5o+P6L+w"/>
+      <column name="version" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Zu+54mH54mI5pys5Y+3"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="category" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_operate_user" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="passwd" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_recommend" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55uu5qCH55So5oi3SUQ="/>
+      <column name="recommend_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5o6o6I2Q55uu5qCHSUQ="/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="MemFkuW6lw=="/>
+      <column name="recommend_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5o6o6I2Q5bGV546w5pel5pyf"/>
+      <column name="oper_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="6L+Q6JCl5pON5L2cSUQ="/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pel5pyf"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_recommend_history" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="uid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi3SUQs5aaC5p6c55So5oi35rKh5pyJ5rOo5YaMLFVJROS4ujA="/>
+      <column name="rid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5o6o6I2Q5byV55SoSUQ="/>
+      <column name="uuid" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="6K6+5aSHSUQ="/>
+      <column name="action" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="6LWE5rqQ5piv5ZCm5bey57uP5o6o6I2Q6L+HLDDkuLrmsqHmnInmjqjojZAsMeS4uuaOqOiNkOi/hw=="/>
+      <column name="recommend_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5o6o6I2Q5pel5pyf"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_recommend_hotel" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="hotel_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" remarks="5o6o6I2Q6YWS5bqX5ZCN56ew"/>
+      <column name="recommend_title" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" remarks="5o6o6I2Q5qCH6aKY"/>
+      <column name="recommend_price" sqlType="FLOAT" precision="9" scale="2" nullable="false" jdbcType="7" def="MC4wMA==" remarks="5o6o6I2Q5Lu35qC8"/>
+      <column name="vip_price" sqlType="FLOAT" precision="9" scale="2" nullable="false" jdbcType="7" def="MC4wMA==" remarks="5LmQ5oCd5Lya5Lya5ZGY5Lu35qC8"/>
+      <column name="img_ids" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5Zu+54mH57uESUQ="/>
+      <column name="hotel_icon" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="6YWS5bqXSUNPTg=="/>
+      <column name="city_id" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5Z+O5biCSUQ="/>
+      <column name="hotel_location_longitude" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5Z2Q5qCH57uP5bqm"/>
+      <column name="hotel_location_latitude" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5Z2Q5qCH57u05bqm"/>
+      <column name="full_address" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="6YWS5bqX6K+m57uG5Zyw5Z2A"/>
+      <column name="recommend_type" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="JzAn" remarks="5o6o6I2Q57G75Z6LIDA65peg5pWw5o2uIDE65qKm5oOz5Zyj5ZywICAyOuS7iuaXpeaOqOiNkCAzOiDku4rml6XkvJHmga8="/>
+      <column name="dream_icon" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5qKm5oOz5LmL5Zyw5o6o6I2Q5Zu+54mH"/>
+      <column name="detail_url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6YWS5bqX6K+m5oOFVVJM"/>
+      <column name="recommend_reason" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="J3t9Jw==" remarks="5o6o6I2Q55CG55SxLOaaguWumuS4ukpTT07moLzlvI8="/>
+      <column name="badge_icon_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5LuK5pel5o6o6I2Q6aaW6aG15b6956ug5Zu+54mHSUQ="/>
+      <column name="badge_desc" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5o6o6I2Q5Zu+5qCH5o+P6L+w"/>
+      <column name="want_to_go_count" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="J3t9Jw==" remarks="5oOz5Y6755qE55So5oi36K6h5pWwLCDlrprml7bku7vliqHmm7TmlrBKU09O"/>
+      <column name="bean_to_go_count" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="J3t9Jw==" remarks="5bey57uP5Y676L+H55qE55So5oi36K6h5pWwLOWumuaXtuS7u+WKoeabtOaWsEpTT04="/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="recommend_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="template" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_recommend_reason" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="rid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="566h55CG6LWE5rqQSUQ="/>
+      <column name="title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5qCH6aKY"/>
+      <column name="img_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5Zu+54mH5Zyw5Z2ASUQ="/>
+      <column name="describe" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5o+P6L+w"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_room_recommend_reason" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="rid" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="img_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="describe" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_room_type_price_resource" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="ROOM_TYPE_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5YWz6IGU6YWS5bqX5oi/5Z6LSUQ="/>
+      <column name="RESOURCE_TYPE_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5Lu35qC85p2l5rqQ57G75Z6LSUQ="/>
+      <column name="RESOURCE_NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5oi/5Z6L5o6o6I2Q5p2l5rqQ5ZCN5a2X"/>
+      <column name="RESOURCE_ICON" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5o6o6I2Q5p2l5rqQ5Zu+54mH5Zyw5Z2A"/>
+      <column name="RECOMMEND_PRICE" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3" def="MC4wMA==" remarks="5o6o6I2Q5Lu35qC8"/>
+      <column name="PURCHASE_URL" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6LSt5Lmw55qEVVJM5Zyw5Z2A"/>
+      <column name="RECOMMEND_DETAIL" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5o6o6I2Q5o+P6L+w"/>
+      <column name="TIMELY_RESERVE" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5Y+K5pe26aKE5a6a5qCH5b+XMTrnjrDlnKjmnInmiL8s6ams5LiK5bCx5Y+v5Lul6aKE5a6a"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_temp_user" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="TEMP_SID" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="55So5oi35Li05pe2SUQs5ZSv5LiA5qCH6K+G5Li05pe255So5oi3"/>
+      <column name="DEVICE_ID" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="6K6+5aSHSUQ="/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_user" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="55So5oi35aeT5ZCN"/>
+      <column name="phone_number" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="55So5oi35omL5py65Y+3"/>
+      <column name="user_password" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="55So5oi35a+G56CB"/>
+      <column name="city" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" remarks="5Z+O5biCSUQ="/>
+      <column name="user_icon_url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="J2h0dHA6Ly93d3cubGUuY29tL3VzZXIvaWNvbi9kZWZhdWx0LnBuZyc=" remarks="55So5oi35aS05YOPSUQ="/>
+      <column name="nick_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="55So5oi35pi156ew"/>
+      <column name="sex" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA==" remarks="MeWlsywy55S3LDDml6DmlYg="/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="MDrkuLTml7bnlKjmiLcsMeaJi+acuuazqOWGjOeUqOaItywyOuW+ruWNmuazqOWGjOeUqOaItywzOuW+ruS/oeazqOWGjOeUqOaItw=="/>
+      <column name="login_status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="MDrmnKrnmbvlvZUsMTrlt7Lnu4/nmbvlvZU="/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <column name="sid" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="data_complete" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" remarks="55So5oi36LWE5paZ6KGl5YWo5qCH5b+X"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_user_answer" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="USER_ID" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="QUESTION_ID" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ANSWER" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_user_device" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" remarks="6Ieq5aKe5bqP5YiXSUQ=" autoIncrement="true"/>
+      <column name="uuid" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="6K6+5aSHSUQ="/>
+      <column name="userid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi3SUQ="/>
+      <column name="sid" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="55So5oi355qEU0lE5ZSv5LiA5qCH6K+G5LiA5Liq55So5oi3"/>
+      <column name="last_login_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pyA5ZCO5LiA5qyh55m75b2V5pe26Ze0"/>
+      <column name="is_login" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="MDrmnKrnmbvlvZUxOuW3sueZu+W9lSwzOuS4tOaXtueUqOaItw=="/>
+      <column name="last_version" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" def="JzEuMCc=" remarks="54mI5pys5LiL6L295o6n5Yi2"/>
+      <column name="download_url" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" def="J2h0dHA6Ly93d3cubGUuY29tLzEuMC9pcGhvbmUvYXBwJw==" remarks="5LiL6L29VVJM"/>
+      <column name="channel" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" def="J2xlJw==" remarks="5rig6YGT"/>
+      <column name="resolution" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" def="JzAsMCc=" remarks="5bGP5bmV55qE5a69LOmrmC7mlrDmt7vliqDnmoTlrZfmrrU="/>
+      <column name="timezone" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J3poX3NoJw==" remarks="5omA5Zyo55qE5pe25Yy6LuaWsOa3u+WKoOeahOWtl+autQ=="/>
+      <column name="device_model" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="6K6+5aSH5qih5byPLuaWsOa3u+WKoOWtl+autQ=="/>
+      <column name="system_version" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="6K6+5aSH5pON5L2c57O757uf54mI5pysLuaWsOa3u+WKoOWtl+autQ=="/>
+      <column name="location" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="JzAsMCc=" remarks="5a6J6KOF5bqU55So5pe25YCZ55qE5Z2Q5qCH5L2N572uLuaWsOa3u+WKoOWtl+autQ=="/>
+      <column name="country" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="5a6J6KOF5bqU55So5pe25YCZ5omA5Zyo5ZKM5Zu95a62LuaWsOa3u+WKoOWtl+autQ=="/>
+      <column name="carrier" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="56e75Yqo6L+Q6JCl5ZWGLuaWsOa3u+WKoOWtl+autQ=="/>
+      <column name="access" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="6L+e5o6l6K6/6Zeu5pa55byPLndpZmksM2csNGcu5paw5re75Yqg5a2X5q61"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_user_discovery_click" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="DEVICE_ID" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_user_interest" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="rid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5peF5ri46LWE5rqQSUQ="/>
+      <column name="uid" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi3SUQ="/>
+      <column name="action" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="55So5oi355qE5Zac5aW9MCzml6DlhbTotqMsMeWWnOasoiwy5LiN5Zac5qyiLDPmg7PljrssNOWOu+i/hw=="/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_user_interest_action" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="ACTION_NAME" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ACTION_VALUE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="RID" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="UID" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_user_questions" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="QUESTION" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ANSWER" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="USER_ID" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_user_recommend_action" schema="" catalog="le_release" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi3SUQ="/>
+      <column name="rid" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="6LWE5rqQSUTmmoLml7bkuLrphZLlupdJRA=="/>
+      <column name="action_type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="55So5oi35Y+N6aaI5L+h5oGvMCzmg7PljrssMeS4jeWWnOasog=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="le_user_resource_location" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="LOCATION_X" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="5Zyw55CG5L2N572uWOWdkOaghw=="/>
+      <column name="LOCATION_Y" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="JzAn" remarks="5Zyw55CG5L2N572uWOWdkOaghw=="/>
+      <column name="USER_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi3SUQ="/>
+      <column name="RESOURCE_NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5peF5ri46LWE5rqQ5ZCN5a2X"/>
+      <column name="RESOURCE_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5peF5ri46LWE5rqQSUQ="/>
+      <column name="REVIEW_TYPE" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5a6h5qC45qCH5b+X"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_user_tag" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="TAGS" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="USER_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="le_validation_code" schema="" catalog="le_release" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="CODE" sqlType="CHAR" precision="6" scale="0" nullable="false" jdbcType="1" remarks="6ZqP5py6NuS9jeaVsOWtl+mqjOivgeeggQ=="/>
+      <column name="GENERATE_TIME" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" remarks="6aqM6K+B56CB55Sf5oiQ5pe26Ze0"/>
+      <column name="UPDATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="CREATE_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="UUID" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PHONE_NUMBER" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+  </data-source>
+</component>

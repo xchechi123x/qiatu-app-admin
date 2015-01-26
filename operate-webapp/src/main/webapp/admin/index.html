@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../themes/icon.css">
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+
+
+    <title>杭州恰途科技APP后台应用管理</title>
+</head>
+
+<body class="easyui-layout">
+<div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:0px">north region</div>
+<div data-options="region:'west',split:true,title:'West'" style="width:150px;padding:0px;">
+    <div class="easyui-accordion" style="width:143px;">
+        <div title="About" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
+            <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+
+            <p>Accordion is a part of easyui framework for jQuery. It lets you define your accordion component on web
+                page more easily.</p>
+        </div>
+        <div title="Help" data-options="iconCls:'icon-help'" style="padding:10px;">
+            <p>The accordion allows you to provide multiple panels and display one or more at a time. Each panel has
+                built-in support for expanding and collapsing. Clicking on a panel header to expand or collapse that
+                panel body. The panel content can be loaded via ajax by specifying a 'href' property. Users can define a
+                panel to be selected. If it is not specified, then the first panel is taken by default.</p>
+        </div>
+        <div title="TreeMenu" data-options="iconCls:'icon-search'" style="padding:10px;">
+            <ul class="easyui-tree">
+                <li>
+                    <span>Foods</span>
+                    <ul>
+                        <li>
+                            <span>Fruits</span>
+                            <ul>
+                                <li>apple</li>
+                                <li>orange</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Vegetables</span>
+                            <ul>
+                                <li>tomato</li>
+                                <li>carrot</li>
+                                <li>cabbage</li>
+                                <li>potato</li>
+                                <li>lettuce</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
+<div data-options="region:'center',title:'Center'"></div>
+
+</body>
+</html>

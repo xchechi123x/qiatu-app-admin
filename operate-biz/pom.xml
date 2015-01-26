@@ -1,0 +1,80 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jihelife</groupId>
+    <name>operate-biz</name>
+    <artifactId>operate-biz</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <url>http://maven.apache.org</url>
+
+    <licenses>
+        <license>
+            <name>le-soft-license</name>
+            <url>http://dev.le.com/le-soft-license.txt</url>
+            <distribution>杭州恰途科技版权所有</distribution>
+            <comments/>
+        </license>
+    </licenses>
+
+    <parent>
+        <groupId>com.jihelife</groupId>
+        <artifactId>qiatu-app-admin</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.jihelife</groupId>
+            <artifactId>operate-dao</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jihelife</groupId>
+            <artifactId>operate-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

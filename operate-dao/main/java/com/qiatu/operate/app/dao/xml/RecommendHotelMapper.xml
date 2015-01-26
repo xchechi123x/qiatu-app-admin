@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiatu.operate.app.dao.mapper.RecommendHotelMapper">
+
+    <resultMap id="RECOMMEND_HOTEL_MODEL_MAP" type="RecommendHotel">
+        <id column="id" property="id"/>
+        <result column="hotel_name" property="hotelName"/>
+        <result column="recommend_title" property="recommendTitle"/>
+        <result column="recommend_time" property="recommendTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+
+    <resultMap id="RECOMMEND_HOTEL_AND_REASON_MAP" type="RecommendHotel">
+        <id column="id" property="id"/>
+        <result column="hotel_name" property="hotelName"/>
+        <result column="recommend_title" property="recommendTitle"/>
+        <result column="recommend_time" property="recommendTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_time" property="createTime"/>
+        <collection property="reasons" javaType="ArrayList"
+                    autoMapping="true" fetchType="eager" column="id"
+                    foreignColumn="rid" select="selectRecommendReason"/>
+    </resultMap>
+
+    <select id="selectRecommendHotelList" resultMap="RECOMMEND_HOTEL_MODEL_MAP">
+      SELECT id,hotel_name,recommend_title,recommend_time,update_time,create_time
+      FROM le_recommend_hotel ORDER BY update_time DESC
+      limit #{recordOffset},#{pageSize}
+    </select>
+
+    <select id="getRecommendHotelSize" resultType="int">
+        select count(*) from le_recommend_hotel h;
+    </select>
+
+    <select id="selectReasonImages" resultType="ImageModel">
+        select id as id,rid as rid ,img_url as url from le_imgs WHERE type = 0 and category = 1
+        limit 0,#{size}
+    </select>
+
+    <insert id="saveRecommendHotel" parameterType="RecommendHotel">
+        <selectKey order="AFTER" keyProperty="id" keyColumn="id" resultType="java.lang.Long">
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into le_recommend_hotel
+        <trim prefix="(" suffix=")">
+            <if test="hotelName != ''">
+                hotel_name,
+            </if>
+            <if test="recommendTitle != ''">
+                recommend_title,
+            </if>
+            <if test="recommendTime != null">
+                recommend_time,
+            </if>
+            update_time,
+            create_time
+        </trim>
+        values
+        <trim prefix="(" suffix=")">
+            <if test="hotelName != ''">
+                #{hotelName,jdbcType=VARCHAR},
+            </if>
+            <if test="recommendTitle != ''">
+                #{recommendTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="recommendTime != null">
+                #{recommendTime,jdbcType=TIME},
+            </if>
+            now(),
+            now()
+        </trim>
+    </insert>
+
+    <insert id="saveRecommendHotelReason" parameterType="RecommendReason">
+        insert into le_recommend_reason
+        <trim prefix="(" suffix=")">
+            <if test="rid != '' and rid > 0">
+                rid,
+            </if>
+            <if test="imgId != '' and rid >0">
+                img_id,
+            </if>
+            <if test="describe != ''">
+                `describe`,
+            </if>
+            update_time,
+            create_time
+        </trim>
+        values
+        <trim prefix="(" suffix=")">
+            <if test="rid != '' and rid > 0">
+                #{rid,jdbcType=BIGINT},
+            </if>
+            <if test="imgId != '' and rid >0">
+                #{imgId,jdbcType=BIGINT},
+            </if>
+            <if test="describe != ''">
+                #{describe,jdbcType=VARCHAR},
+            </if>
+            now(),
+            now()
+        </trim>
+    </insert>
+
+    <delete id="deleteRecommendHotelById">
+        DELETE FROM le_recommend_hotel WHERE id in
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+            ${id}
+        </foreach>
+    </delete>
+
+    <delete id="deleteRecommendReasonByHotelId">
+        DELETE FROM le_recommend_reason WHERE rid in
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+            ${id}
+        </foreach>
+    </delete>
+
+    <select id="selectRecommendHotelById" resultMap="RECOMMEND_HOTEL_AND_REASON_MAP">
+      SELECT id,hotel_name,recommend_title,recommend_time,update_time,create_time
+      FROM le_recommend_hotel WHERE id = #{id}
+    </select>
+
+    <select id="selectRecommendReason" resultType="RecommendReason">
+      select id,title,`describe`,img_id as imgId from le_recommend_reason
+      WHERE  rid = #{id}
+    </select>
+
+    <update id="updateRecommendHotel" parameterType="RecommendHotel">
+        UPDATE le_recommend_hotel
+        <set>
+            <if test="hotelName != ''">
+                hotel_name = #{hotelName},
+            </if>
+            <if test="recommendTitle != ''">
+                recommend_title = #{recommendTitle},
+            </if>
+            <if test="recommendTime != ''">
+                recommend_time = #{recommendTime},
+            </if>
+            update_time = now()
+        </set>
+        WHERE id=#{id}
+    </update>
+
+</mapper>
